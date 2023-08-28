@@ -1,0 +1,51 @@
+Here are the command lines for the functions we discussed earlier: `git pull`, `git merge`, and `git rebase`.
+
+1. **Pull:**
+   - **Command:**
+     ```bash
+     git pull origin branch-name
+     ```
+   - **Usage:** This command fetches the latest changes from the remote repository and integrates them into your current local branch.
+
+2. **Merge:**
+   - **Command (while on the target branch):**
+     ```bash
+     git merge source-branch
+     ```
+   - **Usage:** This command combines the changes from the `source-branch` into the current branch (usually the target branch you're on).
+
+3. **Rebase:**
+   - **Command (while on the feature branch you want to rebase):**
+     ```bash
+     git rebase base-branch
+     ```
+   - **Usage:** This command takes the commits from your feature branch and replays them on top of the latest commits in the `base-branch`.
+
+Remember to replace `origin` with the appropriate remote name, `branch-name` with the target branch's name, and `source-branch` with the branch you want to merge from. Similarly, replace `base-branch` with the branch you want to rebase onto.
+
+Here's a brief example of how to use these commands:
+
+Let's say you're working on a feature branch named `feature/new-feature` and want to integrate the changes into the `main` branch.
+
+```bash
+# Fetch and integrate remote changes into your current branch
+git pull origin main
+
+# Switch to the main branch
+git checkout main
+
+# Merge the changes from the feature branch into main
+git merge feature/new-feature
+```
+
+For rebasing, if you're on the `feature/new-feature` branch and want to rebase onto `main`:
+
+```bash
+# Switch to the feature branch
+git checkout feature/new-feature
+
+# Rebase the feature branch onto main
+git rebase main
+```
+
+Please adapt these commands to your specific use case and repository setup. Always make sure you understand the implications of each command and its impact on your commit history.
