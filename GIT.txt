@@ -1,0 +1,68 @@
+How To connect your local repository to a hosted repository on GitHub, 
+you generally need to follow these steps:
+
+1. **Create a Repository on GitHub:**
+   Start by creating a new repository on GitHub where you want to host your project.
+
+2. **Clone the Repository:**
+   Clone the GitHub repository to your local machine using the following command in your terminal:
+   
+   ```bash
+   git clone <repository_url>
+   ```  
+   Replace `<repository_url>` with the actual URL of your GitHub repository.
+
+3. **Navigate to Your Local Repository:**
+   Move into the newly cloned repository's directory using the `cd` command in your terminal:
+   
+   ```bash
+   cd <repository_name>
+   ```
+
+4. **Connect Local Repository to Remote GitHub Repository:**
+   By default, your local repository is connected to the remote repository on GitHub you cloned it from. 
+   However, if you want to connect it explicitly, you can use the following command:
+
+   ```bash
+   git remote add origin <repository_url>
+   ```
+   Replace `<repository_url>` with the actual URL of your GitHub repository.
+
+5. **Push Local Changes to GitHub:**
+   Make changes to your local repository as needed. When you want to push these changes to 
+   the remote GitHub repository, use the following commands:
+
+   ```bash
+   git add .
+   git commit -m "Your commit message here"
+   git push origin <branch_name>
+   ```
+   Replace `<branch_name>` with the name of the branch you're working on (usually "main" or "master").
+
+6. **Pull Changes from GitHub:**
+   If you or others make changes to the remote repository, you can pull those changes to 
+   your local repository using the following command:
+
+   ```bash
+   git pull origin <branch_name>
+   ```
+
+7. **Creating New Branches:**
+   You can create new branches in your local repository using the following command:
+
+   ```bash
+   git checkout -b <new_branch_name>
+   ```
+   This will create and switch to the new branch.
+
+8. **Pushing and Pulling on Other Branches:**
+   When working on branches other than the default one, make sure to use 
+   the appropriate branch name when pushing and pulling:
+
+   ```bash
+   git push origin <branch_name>
+   git pull origin <branch_name>
+   ```
+
+These are the basic steps to connect your local repository to a hosted repository on GitHub. 
+Remember to replace placeholders with actual values and adapt the instructions to your specific workflow.
