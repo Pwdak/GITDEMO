@@ -1,0 +1,21 @@
+EXPLANATION OF WORDS : ORIGIN, MASTER
+1. **git push:** This is the Git command used to send your
+ local changes (commits) to a remote repository.
+
+2. **-u origin:** The `-u` flag stands for "upstream." It establishes a connection 
+between your local branch and a remote branch. 
+
+	**`origin` is the default name for any remote repository at its creation on local machine 
+So, this part of the command tells Git to set up a tracking relationship between your local branch 
+and the corresponding branch on the remote named 'origin'.
+
+3. **master:** This is the name of the branch you want to push. In this case, 
+you're pushing the changes from your local 'master' branch to the remote 'master' branch.
+
+The `-u` flag is used to set up tracking for the branch relationship between your local and remote branches. 
+Once you've used the `-u` flag for the first push, you typically don't need to use it again for subsequent
+ pushes to the same branch. After the initial push, you can simply use `git push` without any flags to push 
+ changes to the same remote branch.
+
+In summary, the command `git push -u origin master` sends your local commits from your 'master' branch 
+to the 'master' branch on the remote repository named 'origin', while also setting up tracking between the two branches for future pushes.

@@ -1,0 +1,14 @@
+PUSH A FILE TO A REMOTE REPO
+
+# Create or switch to the target branch locally
+git checkout -b feature-branch
+
+If the branch already exists, you can switch to it using the same command 
+without the -b flag
+
+# Add and commit the changes
+git add example.txt
+git commit -m "Add example.txt to feature-branch"
+
+# Push the changes to the remote branch
+git push origin feature-branch
